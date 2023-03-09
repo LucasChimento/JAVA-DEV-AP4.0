@@ -1,0 +1,101 @@
+---------------------------------------------------------------------------------------------------------------------------------------
+ALUMNO: LUCAS CHIMENTO // EJERCICIOS CLASE 1
+---------------------------------------------------------------------------------------------------------------------------------------
+C1 EJERCICIO 1A:
+Utilizando la sentencia while, imprima todos los números entre 2 variables “a”
+y “b”:
+
+
+package Rangodenumeros; // Rango de números en un entorno cerrado [a,b]:
+	public class Numeros {
+		public static void main(String[] args) {
+		 int numeroInicioA = 2; //números de inicio del rango
+		 int numeroFinB = 10; //número final del rango
+		 while (numeroInicioA <= numeroFinB) { // Condicion rango de numeros
+		 System.out.println(numeroInicioA);// Mostrar por pantalla la serie de numeros
+		 numeroInicioA++; // Incremento del contador de 1 unidad
+		}
+	}
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------
+C1 EJERCICIO 1B:
+A lo anterior, solo muestre los números pares:
+
+package TareaActividad2;
+	public class NumerosPares {
+		 public static void main(String[] args) {
+		 int numeroInicio = 1; //  rango inicial
+		 int numeroFin = 16;  // rango final
+		 while (numeroInicio <= numeroFin) { // rango de números
+		 if (numeroInicio % 2 == 0) { // condición de pares
+		 System.out.println(numeroInicio); // mostrar en pantalla pares
+		 }
+		 numeroInicio++; // contador en incremento de una unidad
+		 }
+	 }
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------
+C1 EJERCICIO 1C:
+A lo anterior, con una variable extra, elija si se deben mostrar los números
+pares o impares:
+
+package paresoimpares;
+public class ParesOImpares {
+	public static void main(String[] args) {
+		int numeroInicio = 5;
+		int numeroFin = 14;
+		boolean esPar = true;// variable booleana: "TRUE" muestra los pares, cambiando a "FALSE" muestra los impares.
+		while (numeroInicio <= numeroFin) { // rango de numeros ingresado por el usuario
+		    if (esPar && numeroInicio % 2 == 0) { //Si se cumple la condición = PAR
+		        System.out.println(numeroInicio); // muestra en pantalla PAR
+		    } else if (!esPar && numeroInicio % 2 != 0) { //Si no se cumple la condición = IMPAR
+		        System.out.println(numeroInicio); // muestra en pantalla IMPAR
+		    	}
+		    numeroInicio++;
+		}
+	}
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------
+C1 EJERCICIO 1D:
+Utilizando la sentencia for, hacer lo mismo que en (b) pero invirtiendo el orden:
+
+package rangoparesinverso;
+public class RangoParesInverso {
+	public static void main(String[] args) {
+		int numeroInicio = 14; // Numero de inicio del rango (Ingresado por el usuario)
+		int numeroFin = 5; // Numero de final del rango (Ingresado por el usuario)
+		for (int i = numeroInicio; i >= numeroFin; i--) { // condicion inicial rango decreciente
+		    if (i % 2 == 0) { // condicion de pares
+		        System.out.println(i); // mostrar en pantalla
+		    }
+		}
+	}
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------
+C1 EJERCICIO 2:
+
+package categorizacion;
+public class Ingresos {
+	public static void main(String[] args){
+	        double ingresosMensuales= 500000; // Ingresos mensuales (ingresado por el usuario)
+			int cantVehiculos = 2; // Cantidad de vehículos (ingresado por el usuario)
+			int cantInmuebles = 2; // Cantidad de inmuebles (ingresado por el usuario)
+			boolean tieneEmbarcacion =  true; // Cantidad de embarcaciones (seleccionado por el usuario)
+			boolean tieneAeronave = false; // Cantidad de aeronaves (seleccionado por el usuario)
+			boolean tieneActivosSocietarios = false; // Cantidad de Activos Societarios (seleccionado por el usuario)	
+	    if (ingresosMensuales > 572386.50 && cantVehiculos >= 3 && cantInmuebles >= 3 &&
+	    		(tieneEmbarcacion || tieneAeronave || tieneActivosSocietarios)) { 
+	    	System.out.println ("Segmento alto"); // Primera condición y si cumple muestra en pantalla el "segmento alto"
+	    } else if (ingresosMensuales >= 163539 && ingresosMensuales <= 572386.50 && cantVehiculos <= 2 && cantInmuebles <= 2) {
+	    	System.out.println ("Segmento medio"); // Segunda condición y si cumple muestra en pantalla "segmento medio"
+	    } else {
+	    	System.out.println ("Segmento bajo"); // No cumple las condiciones "muestra en pantalla segmento bajo"
+	    }	
+	}
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------
