@@ -1,0 +1,107 @@
+---------------------------------------------------------------------------------------------------------------------------------------
+ALUMNO: LUCAS CHIMENTO // EJERCICIOS CLASE 3
+---------------------------------------------------------------------------------------------------------------------------------------
+C3 EJERCICIO 1.1A:
+Utilizando solo tipos primitivos, string (sólo usar método length), vectores, iteraciones simples y condicionales, 
+genere una clase qeu posealos siguientes metodos:
+
+Dado un String y una letra, que cuente la cantidad de apariciones de la letra en el String
+
+package contadordeletras;
+
+public class CantidadDeLetras {
+
+	public static void main(String[] args) {
+		String palabra = "Lucas";
+		char letra = 'u';
+		int contador = 0;
+		for (int i = 0; i < palabra.length(); i++) {
+		  if (palabra.charAt(i) == letra) {
+		    contador++;
+		  }
+		}
+		System.out.println("La letra " + letra + " aparece " + contador + " veces en la palabra " + palabra);
+	}
+}
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------
+C3 EJERCICIO 1.1B:
+Dado 3 números y un orden (ascendente o decreciente) que ordene los mismos y los retorne en un vector de 3.
+
+//(caso para orden decreciente)
+
+package ordendenumeros;
+
+public class Orden {
+	    public static void main(String[] args) {        
+	        // Definicion del array y del elemento temporal para cambiar el orden de los numeros.   
+	        int [] arr = new int [] {5, 2, 8, 7, 1};     
+	        int temp = 0;    
+	        // Mostrar elementos del array:
+	        System.out.println("Array original: ");    
+	        for (int i = 0; i < arr.length; i++) {     
+	            System.out.print(arr[i] + " ");    
+	        }
+	        // Array ordenado de manera decreciente: 
+	        for (int i = 0; i < arr.length; i++) {     
+	            for (int j = i+1; j < arr.length; j++) {     
+	               if(arr[i] < arr[j]) {    
+	                   temp = arr[i];    
+	                   arr[i] = arr[j];    
+	                   arr[j] = temp;    
+	               }     
+	            }     
+	        }   
+	        // Mostrar en consola el array ordenado:
+	        System.out.println("Array en orden decreciente: ");    
+	        for (int i = 0; i < arr.length; i++) {     
+	            System.out.print(arr[i] + " ");    
+	        }    
+	    }    
+	}    
+---------------------------------------------------------------------------------------------------------------------------------------
+C3 EJERCICIO 1.1C:
+Dado un vector de números, y un número X, que sume todos los números > X y retorne el resultado. 
+
+package sumadenumerosmayores;
+
+public class Sumademayores {
+	public static void main(String[] args) {
+		int vector[]= {3,6,7,14,26,32,46}; // definición de elementos del vector
+		int x = 15, suma = 0; // definición del número x, suma inicializada en 0
+		for (int i = 0; i<vector.length; i++) { // ciclo for
+			if(vector[i]>x) {suma=suma+vector[i];} // comparación
+		}
+		System.out.print("La suma es:" + suma); // mostrar resultado de la suma
+	}
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------
+C1 EJERCICIO 1D:
+Utilizando la sentencia for, hacer lo mismo que en (b) pero invirtiendo el orden:
+
+package rangoparesinverso;
+public class RangoParesInverso {
+	public static void main(String[] args) {
+		int numeroInicio = 14; // Numero de inicio del rango (Ingresado por el usuario)
+		int numeroFin = 5; // Numero de final del rango (Ingresado por el usuario)
+		for (int i = numeroInicio; i >= numeroFin; i--) { // condicion inicial rango decreciente
+		    if (i % 2 == 0) { // condicion de pares
+		        System.out.println(i); // mostrar en pantalla
+		    }
+		}
+	}
+}
+
+---------------------------------------------------------------------------------------------------------------------------------------
+C3 EJERCICIO 2:
+Genere una clase, utilice el método Split para separar una lista de 10 nombres tomados de una variable, 
+luego muestre por consola el resultado.
+
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------
