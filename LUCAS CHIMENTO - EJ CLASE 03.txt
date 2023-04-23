@@ -79,29 +79,20 @@ public class Sumademayores {
 }
 
 ---------------------------------------------------------------------------------------------------------------------------------------
-C1 EJERCICIO 1D:
-Utilizando la sentencia for, hacer lo mismo que en (b) pero invirtiendo el orden:
 
-package rangoparesinverso;
-public class RangoParesInverso {
-	public static void main(String[] args) {
-		int numeroInicio = 14; // Numero de inicio del rango (Ingresado por el usuario)
-		int numeroFin = 5; // Numero de final del rango (Ingresado por el usuario)
-		for (int i = numeroInicio; i >= numeroFin; i--) { // condicion inicial rango decreciente
-		    if (i % 2 == 0) { // condicion de pares
-		        System.out.println(i); // mostrar en pantalla
-		    }
-		}
-	}
-}
-
----------------------------------------------------------------------------------------------------------------------------------------
 C3 EJERCICIO 2:
 Genere una clase, utilice el método Split para separar una lista de 10 nombres tomados de una variable, 
 luego muestre por consola el resultado.
 
+package E2;
 
+import java.util.Arrays;
 
-
-
+public class separarVariables {
+	public static void main(String[] args) {
+		String nombres = "Juan, Pedro, Luisa, Ana, Maria, Jose, Carlos, Sofia, Lucia, Andres";
+		String[] nombresSeparados = nombres.split(", ");
+		System.out.println(Arrays.toString(nombresSeparados));
+	}
+}
 ---------------------------------------------------------------------------------------------------------------------------------------
